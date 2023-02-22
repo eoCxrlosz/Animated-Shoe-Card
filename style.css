@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wgth@300;400;500;600;700;800,900&display=swap');
+
+:root {
+    --primary: #2175f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+     background-color: #fff;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 860px;
+}
+
+.showBackground {
+    position: relative;
+    width: 50%;
+height: 475px;
+box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.gradients {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.first {
+    z-index: 0;
+    animation: 1s width ease;
+}
+
+@keyframes width{
+    form {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.second {
+    z-index: -1;
+}
+
+.gradient[color="blue"]{
+    background-image: linear-gradient(45deg, #0b52be, #0b52be);
+}
+
+.gradient[color="red"]{
+    background-image: linear-gradient(45deg, #d51a17, #d51a17);
+}
+
+.gradient[color="green"]{
+    background-image: linear-gradient(45deg, #0eba53, #0eba53);
+}
+
+.gradient[color="orange"]{
+    background-image: linear-gradient(45deg, #fc4a1a, #fc4a1a);
+}
+
+.gradient[color="black"]{
+    background-image: linear-gradient(45deg, #111, #111);
+}
+
+.logo {
+    position: absolute;
+    width: 100px;
+    left: 20px;
+    top: 20px;
+}
+
+.share {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: .5s;
+}
+
+.share:hover {
+    transform: scale(1.1);
+}
+
+.share {
+    line-height: 50px;
+}
+
+.nike {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    font-size: 11rem;
+    text-transform: uppercase;
+    line-height: .9;
+    color: #fff;
+    opacity: .1;
+}
+
+.shoe {
+    position: absolute;
+    width: 140%;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-20deg);
+    transition: .5s;
+}
+
+.shoe.show {
+    opacity: 1;
+}
+
+.info {
+    width: 50%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 35px 40px;
+    box-shadow: 15px 35px rgba(0, 0, 0, 0.1),0 -15px 35px rgba(0, 0, 0, 0.1),0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.showName {
+    padding: 0 0 10px 0;
+}
+
+.shoeName div {
+    display: flex;
+    align-items: center;
+}
+
+.shoeName div .big {
+    margin-right: 10px;
+    font-size: 2rem;
+    color: #333;
+    line-height: 1;
+}
+
+.shoeName div .new {
+    background-color: var(--primary);
+    text-transform: uppercase;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.shoeName .small {
+    font-weight: 500;
+    color: #444;
+    margin-top: 3px;
+    text-transform: capitalize;
+}
+
+.showName, .description, .color-container, .size-container {
+    border-bottom: 1px solid #dadada;
+}
+
+.description {
+    padding: 10px 0;
+}
+
+.title {
+    color: #555;
+    font-size: 17px;
+}
+
+.color-container {
+    padding: 10px 0;
+}
+
+.colors {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 5px solid;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.color[color="blue"]{
+    background-color: #0b52be;
+    border-color: #0b52be;
+}
+
+.color[color="red"]{
+    background-color: #d51a17;
+    border-color: #d51a17;
+}
+
+.color[color="green"]{
+    background-color: #0eba53;
+    border-color: #0eba53;
+}
+
+.color[color="orange"]{
+    background-color: #fc4a1a;
+    border-color: #fc4a1a;
+}
+
+.color[color="black"]{
+    background-color: #000;
+    border-color: #000;
+}
+
+.color.active {
+    border-color: #fff;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.size-container {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sizes {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.size {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #cecccc;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.buy-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    display: flex;
+    align-items: center;
+  }
+  
+  .price h1 {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }  
+
+.price i {
+    font-size: 1.4rem;
+    margin-right: 1px;
+}
+
+.buy {
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+
+.buy:hover {
+    transform: scale(1.1);
+}
+
+.buy i {
+    margin-right: 2px;
+}
+
+@media(max-width: 1070px){
+    .shoe {
+        width: 135%;
+    }
+
+}
+
+@media(max-width: 1000px){
+    .card {
+        width: 100%;
+        flex-direction: column;
+        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+    .card > div {
+        width: 100%;
+        box-shadow: none;
+    }
+    .shoe {
+        width: 100%;
+        transform: rotate(-5deg) translateY(-50%);
+        top: 55%;
+        right: 2%;
+    }
+    .nike {
+        top: 20%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 600px){
+    .share {
+        width: 40px;
+        height: 40px;
+    }
+    .share i {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    .logo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 490px){
+    .nike {
+        font-size: 1.3rem;
+    }
+    .small {
+        font-size: 1rem;
+    }
+    .new {
+        padding: 2px 6px;
+        font-size: .9rem;
+    }
+    .title {
+        font-size: .9rem;
+    }
+    .text {
+        font-size: .8rem;
+    }
+    .buy {
+        padding: .5rem .8rem;
+        font-size: 8rem;
+    }
+    .price h1{
+        font-size: 1.5rem;
+    }
+    .price i {
+        font-size: .9rem;
+    }
+    .size {
+        width: 30px;
+        height: 30px;
+        margin: 0 8px;
+        font-size: .9rem;
+        line-height: 30px;
+    }
+    .color {
+        margin: 0 6px;
+        width: 0 20px;
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+    .share {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+    }
+    .share i {
+        font-size: .8rem;
+        line-height: 35px;
+    }
+    .logo {
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+    .info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px){
+    .buy i {
+        display: none;
+    }
+    .container {
+        padding: 20px;
+    }
+}
